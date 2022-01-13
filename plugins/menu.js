@@ -9,28 +9,32 @@ const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
 ┏━━〔 ${namabot} 〕━⬣
-┃⬡ Hai, %name!
 ┃
-┃⬡ Tersisa *%limit Limit*
-┃⬡ Role *%role*
-┃⬡ Level *%level (%exp / %maxexp)* 
-┃⬡ [%xp4levelup]
-┃⬡ %totalexp XP secara Total
+┃─────═[ *USER INFO* ]═─────⋆
+│▸ Nama *%name
+│▸ Tersisa *%limit Limit*
+│▸ Role *%role*
+│▸ Premium *%prems*
+│▸ Level *%level (%exp / %maxexp)* 
+│▸ [%xp4levelup]
+│▸ %totalexp XP secara Total
 ┃ 
-┃⬡ Hari : *%week %weton* 
-┃⬡ Tanggal : *%date*
-┃⬡ Tanggal Islam : 
-┃⬡ *%dateIslamic*
-┃⬡ Waktu: *%time*
+┃─────═[ *TANGGAL & WAKTU* ]═─────⋆
+│▸ Hari : *%week %weton* 
+│▸ Tanggal : *%date*
+│▸ Tanggal Islam : 
+│▸ *%dateIslamic*
+│▸ Waktu: *%time*
 ┃
-┃⬡ Uptime: *%uptime (%muptime)*
-┃⬡ Database: %rtotalreg dari %totalreg
-┃⬡ Github:
-┃⬡ Github.com/Andriiwalker
+┃─────═[ *BOT INFO* ]═─────⋆
+│▸ Uptime: *%uptime (%muptime)*
+│▸ Database: %rtotalreg dari %totalreg
+│▸ Speed: ${neww - old} ms
+│▸ Mode: ${global.opts['self'] ? 'Private' : 'Publik'}
 ┃
 ┗━━━━━━⬣`.trimStart(),
   header: '┏━━〔 %category 〕━⬣',
-  body: '┃⬡%cmd %islimit %isPremium',
+  body: '┃◌ ⃝✧⪼ %cmd %islimit %isPremium',
   footer: '┗━━⬣\n',
   after: `
 *%npmname@^%version*
@@ -232,24 +236,24 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
           "title": `${ucapan()}, ${name}`.trim(),
           "description": `
 ┏━━〔 Status 〕━⬣
-┃⬡ Aktif selama ${uptime}
-┃⬡ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-┃⬡ *${Object.keys(global.db.data.users).length}* Pengguna
-┃⬡ *${totaljadibot.length}* Jadibot
-┃⬡ *${conn.blocklist.length}* Terblock
-┃⬡ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-┃⬡ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+│▸ Aktif selama ${uptime}
+│▸ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+│▸ *${Object.keys(global.db.data.users).length}* Pengguna
+│▸ *${totaljadibot.length}* Jadibot
+│▸ *${conn.blocklist.length}* Terblock
+│▸ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+│▸ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ┃
-┃⬡ Group Official 1 :
-┃    ${gc1}
-┃
-┃⬡ Group Official 2 :
-┃    ${gc2}
-┃
-┃⬡ Group Official 3 :
-┃    ${gc3}
-┃
-┃
+
+
+
+
+
+
+
+
+
+
 ┗━━━━━━━━⬣`.trim(),
           "buttonText": "Klik Disini",
           "listType": "SINGLE_SELECT",
