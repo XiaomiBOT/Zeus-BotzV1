@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *Sc Bot* :        *Masih Beta*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
-╠➥ Gopay, Dana, Dan Pulsa
+╠➥ Dana, Dan Pulsa
 ║
 ╠═ Tertarik Untuk Beli Bot Ini?
 ╠➥Ketuk Tombol Di Bawah Ya
