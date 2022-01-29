@@ -15,8 +15,8 @@ gc1 = ''
 gc2 = ''
 gc3 = ''
 global.linkGC = ['https://chat.whats', 'https://chat.whatsap'] // ganti jadi group lu
-global.owner = ['6289625556161','6285879725408'] // Put your number here //owner eval
-global.kontak = ['6289625556161','6285879725408']//Ketika ada yang ngetik #owner
+global.owner = ['6289625556161'] // Put your number here //owner eval
+global.kontak = ['6289625556161']//Ketika ada yang ngetik #owner
 global.mods = ['62896255561617'] // Want some help?
 global.prems = ['62896255561610'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -53,13 +53,13 @@ namakontak2 = 'CacaGblk'
 //kasihcaption = `Nih Kak`
 
 // Sticker WM
-global.packname = 'BOT WANGSAF' // ganti aja
+global.packname = '©ZEUS BOTZ' // ganti aja
 global.author = 'CacaSepongPilar :V' // ganti aja
 
 //yyy
-bc = 'RFK' //ANDRIIxBOTZ Broadcast
-footer = '\n©BOT WANGSAF'
-namabot = 'BOT WANGSAF V99'
+bc = 'ZEUS' //ZEUS BOTZ Broadcast
+footer = '\n©ZEUS BOTZ'
+namabot = 'ZEUS BOTZ'
 namalu = 'Pilarrr'
 
 
