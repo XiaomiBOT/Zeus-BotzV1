@@ -32,18 +32,17 @@ let handler = async (m, { conn, text }) => {
     let groupMetadata = m.isGroup ? await conn.groupMetadata(m.chat) : {}
     let participants = m.isGroup ? groupMetadata.participants : []
     let users = m.isGroup ? participants.find(u => u.jid == user) : {}
-    if(!users) return conn.reply(m.chat, `[❗] Target atau Nomor tidak ditemukan, mungkin sudah keluar atau bukan anggota grup ini.`, m)
-    if(user === m.sender) return conn.reply(m.chat, `[❗] Tidak bisa berpacaran dengan diri sendiri!`, m)
-    if(user === conn.user.jid) return conn.reply(m.chat, `[❗] Tidak bisa berpacaran dengan saya. . .`, m)
+    if(!users) return conn.reply(m.chat, `Target atau Nomor tidak ditemukan, mungkin sudah keluar atau bukan anggota grup ini.`, m)
+    if(user === m.sender) return conn.reply(m.chat, `Tidak bisa berpacaran dengan diri sendiri!`, m)
+    if(user === conn.user.jid) return conn.reply(m.chat, `Tidak bisa berpacaran dengan saya t_t`, m)
     
     if(global.db.data.users[user].pasangan != m.sender){
-      conn.reply(m.chat,`Maaf @${user.split('@')[0]} tidak sedang menembak anda 👥`,m,{contextInfo: {
+      conn.reply(m.chat,`Maaf @${user.split('@')[0]} tidak sedang menembak anda`,m,{contextInfo: {
         mentionedJid: [user]
       }})
     }else{
       global.db.data.users[m.sender].pasangan = user
-      global.db.data.users[m.sender, user].money -= 1000
-      conn.reply(m.chat,`Selamat anda resmi berpacaran dengan @${user.split('@')[0]} 💗\n\n🎉 Semoga langgeng dan bahagia selalu @${user.split('@')[0]} 💓 @${m.sender.split('@')[0]} 🥳🥳🥳\n\n💹 *Pajak Jadian:* -1000 `,m,{contextInfo: {
+      conn.reply(m.chat,`Selamat anda resmi berpacaran dengan @${user.split('@')[0]}\n\nSemoga langgeng dan bahagia selalu @${user.split('@')[0]} 💓 @${m.sender.split('@')[0]} 🥳🥳🥳`,m,{contextInfo: {
         mentionedJid: [m.sender,user]
       }})
     }

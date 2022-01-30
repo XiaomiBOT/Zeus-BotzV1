@@ -32,24 +32,24 @@ let handler = async (m, { conn, text }) => {
     let groupMetadata = m.isGroup ? await conn.groupMetadata(m.chat) : {}
     let participants = m.isGroup ? groupMetadata.participants : []
     let users = m.isGroup ? participants.find(u => u.jid == user) : {}
-    if(!users) return conn.reply(m.chat, `[❗] Target atau Nomor tidak ditemukan, mungkin sudah keluar atau bukan anggota grup ini.`, m)
-    if(user === m.sender) return conn.reply(m.chat, `[❗] Tidak bisa berpacaran dengan diri sendiri!`, m)
-    if(user === conn.user.jid) return conn.reply(m.chat, `[❗] Tidak bisa berpacaran dengan saya . . .`, m)
+    if(!users) return conn.reply(m.chat, `Target atau Nomor tidak ditemukan, mungkin sudah keluar atau bukan anggota grup ini.`, m)
+    if(user === m.sender) return conn.reply(m.chat, `Tidak bisa berpacaran dengan diri sendiri!`, m)
+    if(user === conn.user.jid) return conn.reply(m.chat, `*Tidak bisa berpacaran dengan saya t_t`, m)
     
     if(global.db.data.users[user].pasangan != m.sender){
-      conn.reply(m.chat,`[❗] Maaf @${user.split('@')[0]} tidak sedang menembak anda 👥`,m,{contextInfo: {
+      conn.reply(m.chat,`Maaf @${user.split('@')[0]} tidak sedang menembak anda`,m,{contextInfo: {
         mentionedJid: [user]
       }})
     }else{
       global.db.data.users[user].pasangan = ""
-      conn.reply(m.chat,`Anda baru saja menolak @${user.split('@')[0]} untuk menjadi pasangan anda! 💔`,m,{contextInfo: {
+      conn.reply(m.chat,`Anda baru saja menolak @${user.split('@')[0]} untuk menjadi pasangan anda!`,m,{contextInfo: {
         mentionedJid: [user]
       }})
     }
 	}	
 }
 handler.help = ['tolak @tag']
-handler.tags = ['jodoh']
+handler.tags = ['jadian']
 handler.command = /^(tolak)$/i
 handler.mods = false
 handler.premium = false

@@ -28,27 +28,27 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   }
 
   if (typeof global.db.data.users[user] == "undefined"){
-    return m.reply("```Target tidak terdaftar di dalam database! 🗃️```")
+    return m.reply("Target tidak terdaftar di dalam database!")
   }
 
   if (typeof global.db.data.users[global.db.data.users[user].pasangan] == "undefined" && global.db.data.users[user].pasangan != ""){
-    return m.reply("```Target tidak terdaftar di dalam database! 🗃️```")
+    return m.reply("Target tidak terdaftar di dalam database!")
   }
 
   if (global.db.data.users[user].pasangan == "") {
-    conn.reply(m.chat, `${orang} tidak memiliki pasangan dan tidak sedang menembak siapapun 👥\n\n▸ Ketik *.jadian @user* untuk menembak seseorang`, m)
+    conn.reply(m.chat, `${orang} tidak memiliki pasangan dan tidak sedang menembak siapapun\n\n*Ketik .jadian @user untuk menembak seseorang*`, m)
   }else if (global.db.data.users[global.db.data.users[user].pasangan].pasangan != user){
-    conn.reply(m.chat, `📝 ${orang} sedang menunggu jawaban dari @${global.db.data.users[user].pasangan.split('@')[0]} karena sedang tidak diterima atau di tolak\n\n▸ Ketik *${usedPrefix}ikhlasin* untuk mengikhlaskan!`, m,{contextInfo: {
+    conn.reply(m.chat, `${orang} sedang menunggu jawaban dari @${global.db.data.users[user].pasangan.split('@')[0]} karena sedang tidak diterima atau di tolak\n\nKetik *${usedPrefix}ikhlasin* untuk mengikhlaskan!`, m,{contextInfo: {
       mentionedJid: [global.db.data.users[user].pasangan]
     }})
   }else {
-    conn.reply(m.chat, `[💓] ${orang} sedang menjalani hubungan dengan @${global.db.data.users[user].pasangan.split('@')[0]}`, m,{contextInfo: {
+    conn.reply(m.chat, `${orang} sedang menjalani hubungan dengan @${global.db.data.users[user].pasangan.split('@')[0]} 💓💓💓`, m,{contextInfo: {
       mentionedJid: [global.db.data.users[user].pasangan]
     }})
   }
 }
 handler.help = ['cekpacar']
-handler.tags = ['jodoh']
+handler.tags = ['jadian']
 handler.command = /^(cekpacar)$/i
 handler.fail = null
 module.exports = handler
