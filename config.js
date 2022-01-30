@@ -15,7 +15,7 @@ gc1 = ''
 gc2 = ''
 gc3 = ''
 global.linkGC = ['https://chat.whats', 'https://chat.whatsap'] // ganti jadi group lu
-global.owner = ['6289625556161'] // Put your number here //owner eval
+global.owner = ['6289625556161','62896255561619'] // Put your number here //owner eval
 global.kontak = ['6289625556161']//Ketika ada yang ngetik #owner
 global.mods = ['62896255561617'] // Want some help?
 global.prems = ['62896255561610'] // Premium user has unlimited limit
@@ -48,7 +48,7 @@ namaig = 'GAK ADA :)'
 namagithub = 'Privat Syg'
 kasihcaption = `Nih kak`
 namakontak1 = 'PilarGntg 😱'
-namakontak2 = 'CacaGblk'
+namakontak2 = 'Caca'
 
 //kasihcaption = `Nih Kak`
 
