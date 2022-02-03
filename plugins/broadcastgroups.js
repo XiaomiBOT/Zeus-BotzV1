@@ -3,6 +3,7 @@ let handler  = async (m, { conn, text }) => {
   let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
   let teks = text ? text : cc.text
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
+  conn.send2ButtonLoc(m.chat, await(await fetch(fla + teks)).buffer(), text.trim(), `ZEUS BOTZ`, 'MENU', `${_p}menu all`, 'RULES', `${_p}rules`, m) }
   for (let id of groups) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + `\n「 Group Broadcast 」`), true).catch(_=>_)
   m.reply('Selesai Broadcast All Group :)')
 }
