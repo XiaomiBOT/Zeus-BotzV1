@@ -1,0 +1,6 @@
+Zeus-BotzV1
+
+Fitur:
+1. FIX BUG
+2. ADD FITUR 
+3. ADD FITUR PREMIUM
