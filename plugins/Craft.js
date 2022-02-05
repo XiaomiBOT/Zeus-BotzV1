@@ -97,7 +97,7 @@ Masih beta
   }
 }
 
-handler.help = ['mining']
+handler.help = ['craft']
 handler.tags = ['rpg']
 handler.command = /^(craft|crafting|enchant)/i
 
