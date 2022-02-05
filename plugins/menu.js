@@ -287,7 +287,7 @@ let totaljadibot = [...new Set([...global.conns.filter(conn => conn.user && conn
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), footer, 'OWNER BOT', '.owner', 'RULES BOT', '.rules', m)
+    await conn.send3ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), footer, 'OWNER', '.owner', 'DONASI', '.donasi', 'RULES', '.rules', m)
   } catch (e) {
     //conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
