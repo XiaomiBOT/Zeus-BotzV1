@@ -16,7 +16,8 @@ let handler = async (m, { conn }) => {
 ╠═ Scrip original by Nurutomo
 ╠═〘 ${namabot} 〙 ═`.trim(), footer, 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
 }
-
-handler.command = /^sewa(bot)?$/i
+handler.help = ['sewabot']
+handler.tags = ['main']
+handler.command = /^sewabot$/i
 
 module.exports = handler
