@@ -10,7 +10,7 @@ const defaultMenu = {
 │    *${ucapan()} %name!*
 ┠─────═[ *USER INFO* ]═─────⋆
 │▸ *Name:* %name
-│▸ *Premium:*
+│▸ *Premium:* 404
 │▸ *Limit:* %limit
 │▸ *Role:* %role
 │▸ *Xp:* %exp / %maxexp
@@ -22,7 +22,7 @@ const defaultMenu = {
 ┠─────═[ *BOT INFO* ]═─────⋆
 │▸ *Name:* %me
 │▸ *Mode:* ${global.opts['self'] ? 'Private' : 'Publik'}
-│▸ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
+│▸ *Memory Used* : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
 │▸ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 │▸ *Uptime:* %uptime (%muptime)
 │▸ *Database:* %rtotalreg dari %totalreg
