@@ -29,10 +29,10 @@ module.exports = {
             if (!isNumber(user.healt)) user.healt = 100
             if (!isNumber(user.level)) user.level = 0
             if (!isNumber(user.exp)) user.exp = 0
-            if (!isNumber(user.title)) user.title = ''
-            if (!isNumber(user.limit)) user.limit = 50
+            if (!isNumber(user.title)) user.title = 'NGEWE DEK'
+            if (!isNumber(user.limit)) user.limit = 15
             if (!isNumber(user.lastclaim)) user.lastclaim = 0
-            if (!isNumber(user.money)) user.money = 0
+            if (!isNumber(user.money)) user.money = 1000
             
             if (!isNumber(user.diamond)) user.diamond = 0
             if (!isNumber(user.iron)) user.iron = 0
@@ -114,11 +114,11 @@ module.exports = {
         } else global.db.data.users[m.sender] = {
             healt: 100,
             level: 0,
-            title: '',
+            title: 'NGEWE DEK',
             exp: 0,
-            limit: 50,
+            limit: 15,
             lastclaim: 0,
-            money: 0,
+            money: 100,
             diamond: 0,
             iron: 0,
             common: 0,
